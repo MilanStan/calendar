@@ -184,22 +184,6 @@ header h1 {
     margin: 0 auto;
 }
 
-/* #prev,
-#next {
-    position: absolute;
-    max-width: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 5px;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-#next {
-    left: initial;
-    right: 5px;
-} */
-
 .day,
 .day-prev-month,
 .day-label {
