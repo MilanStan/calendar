@@ -54,7 +54,7 @@ var DateManipulation = (function () {
     //public functions
     return {
         //make date object for selected date and return data
-        getDateInfo: function (day = 0) {
+        getDateInfo: function (day=0) {
             if (day) {
                 var newDate = new Date(year, month, day);
                 var newDayOfWeek = newDate.getDay() ? newDate.getDay() : 7;
@@ -159,9 +159,11 @@ var UIController = (function (dateManipulation) {
     //Input events
     var Events = {
         loadOnInit:function(){
-            monthData=dateManipulation.turnMonth('current');
-            printMonth(monthData.daysNumber,monthData.dayOfWeek,monthData.isCurrent, Events.selectDate);
-            printMonthTitle(monthData.month,monthData.year);
+            window.addEventListener('load',function(){
+                monthData=dateManipulation.turnMonth('current');
+                printMonth(monthData.daysNumber,monthData.dayOfWeek,monthData.isCurrent, Events.selectDate);
+                printMonthTitle(monthData.month,monthData.year);
+            });
         },
         loadMonth: function () {
             var changeMonthBtns = document.getElementsByClassName(DOMStrings.changeMonthBtn);
